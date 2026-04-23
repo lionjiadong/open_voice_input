@@ -1,0 +1,36 @@
+[project]
+name = "open-voice-input"
+version = "0.1.0"
+description = "Stream ASR output from an OpenAI-compatible endpoint"
+readme = "README.md"
+requires-python = ">=3.14.4"
+dependencies = [
+    "gradio>=6.13.0",
+    "httpx>=0.28.1",
+    "numpy>=2.4.4",
+    "openai>=2.32.0",
+    "pybase64>=1.4.3",
+    "pynput>=1.8.1",
+    "rumps>=0.4.0",
+    "sounddevice>=0.5.5",
+    "soundfile>=0.13.1",
+    "websockets>=16.0",
+]
+
+[dependency-groups]
+dev = [
+    "pyright>=1.1.408",
+    "ruff>=0.15.11",
+]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+
+[tool.pyright]
+pythonVersion = "3.14"
+typeCheckingMode = "basic"
+venvPath = "."
+venv = ".venv"
